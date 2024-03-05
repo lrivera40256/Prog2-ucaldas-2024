@@ -9,7 +9,7 @@ public class Person {
     public String email = "";
 
     public void inputDataUser() {
-        System.out.println("Enter your name: ");
+        System.out.println("Enter your name:  ");
         name_person = scn.nextLine();
 
         System.out.println("Enter your address: ");

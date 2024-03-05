@@ -9,7 +9,7 @@ public class Animal {
     public String animal_color = "";
 
     public void showInformation() {
-        System.out.println("Enter name for the animal: ");
+        System.out.println("Enter name for the animal:  ");
         animal_name = scn.nextLine();
 
         System.out.println("Enter animal species: ");
