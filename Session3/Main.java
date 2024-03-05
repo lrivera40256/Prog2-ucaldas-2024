@@ -1,7 +1,9 @@
 public class Main {
-    static Person inst_Person = new Person();
+    static Person inst_person = new Person();
+    static Animal inst_animal = new Animal();
 
     public static void main(String[] args) {
-        inst_Person.inputDataUser();
+        inst_person.inputDataUser();
+        inst_animal.showInformation();
     }
 }
