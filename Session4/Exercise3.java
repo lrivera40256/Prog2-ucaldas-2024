@@ -24,10 +24,11 @@ public class Exercise3 {
     }
 
     public void buscarPorDueno(LinkedList<Exercise3> lista, String comparacion) {
-        for (Exercise3 id : lista)
-            if (moto.class.getName().equals(comparacion))
-                ;
-        existe = true;
+        for (Exercise3 id : lista) {
+            if (moto.class.getName().equals(comparacion)) {
+                existe = true;
+            }
+        }
     }
 
     public void nombreDuenoBuscar() {
