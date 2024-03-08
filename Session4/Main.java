@@ -1,27 +1,42 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int x;
 
-        /* Exercise 1 */
-        /*
-         * Exercise1 sum = new Exercise1();
-         * 
-         * sum.leerArreglo();
-         * sum.sumarArreglo();
-         * sum.mostrarResultado();
-         */
+        System.out.println("Presione una de las opciones:");
+        System.out.println("1- Ejercicio 1 (sumar datos de un array)");
+        System.out.println("2- Ejercicio 2 (Crear y modificar un arrayList)");
+        System.out.println("3- Ejercicio 3 (Buscar un elemento de una lista de objetos [LinkedList] )");
+        x = scn.nextInt();
 
-        /* Exersice 2 */
+        switch (x) {
+            case 1:
+                // Exercise 1
+                Exercise1 sum = new Exercise1();
 
-        /*
-         * Exercise2 llenarArrayList = new Exercise2();
-         * 
-         * llenarArrayList.repetirHastaCondicion();
-         */
+                sum.leerArreglo();
+                sum.sumarArreglo();
+                sum.mostrarResultado();
 
-        /* Exercise 3 */
+                break;
 
-        Exercise3 buscarNombre = new Exercise3();
-        buscarNombre.atenderCliente();
+            case 2:
+                // Exercise 2
+                Exercise2 llenarArrayList = new Exercise2();
+                llenarArrayList.repetirHastaCondicion();
 
+            case 3:
+                // Exercise 3
+                Exercise3 buscarNombre = new Exercise3();
+                buscarNombre.atenderCliente();
+
+            case 4:
+                // Exersice 4
+
+            default:
+                break;
+        }
     }
 }

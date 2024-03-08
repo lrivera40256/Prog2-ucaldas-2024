@@ -44,7 +44,6 @@ public class Exercise3 {
 }
 
 class moto {
-    Scanner scn = new Scanner(System.in);
     public String dueno, marca;
     public int modelo, cilindraje;
 
