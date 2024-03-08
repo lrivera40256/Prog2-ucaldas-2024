@@ -1,24 +1,39 @@
-import java.util.Scanner;
-
-/**
- * Exercise4
- */
 public class Exercise4 {
-    Scanner scn = new Scanner(System.in);
 
-    public void agregarContacto() {
-
+    public String user_name;
+    public String cellphone;
+    public String email;
+    
+    public Exercise4(String user_name_param, String cellphone_param , String email_param) {
+        this.user_name = user_name_param;
+        this.cellphone = cellphone_param;
+        this.email = email_param;
     }
 
-}
-
-class contacto {
-    public String nombre, email;
-    public int celular;
-
-    contacto(String n, String e, int c) {
-        n = nombre;
-        e = email;
-        c = celular;
+    public String getUser_name() {
+        return user_name;
     }
+
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
+        
+    }
+
+    public String getCellphone() {
+        return cellphone;
+    }
+
+    public void setCellphone(String cellphone) {
+        this.cellphone = cellphone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Exercise4
 }
