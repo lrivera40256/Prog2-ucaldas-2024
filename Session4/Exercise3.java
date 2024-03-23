@@ -48,10 +48,9 @@ class moto {
     public int modelo, cilindraje;
 
     moto(String d, String m, int mod, int c) {
-        dueno = d;
-        marca = m;
-        modelo = mod;
-        cilindraje = c;
+        this.dueno = d;
+        this.marca = m;
+        this.modelo = mod;
+        this.cilindraje = c;
     }
-
 }
