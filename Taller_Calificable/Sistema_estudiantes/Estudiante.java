@@ -1,5 +1,3 @@
-package Sistema_estudiantes;
-
 // Se debe crear una clase Estudiante con los siguientes atributos:
 // nombre (String): Nombre completo del estudiante.
 // codigo (String): Código único de identificación del estudiante.
@@ -17,6 +15,9 @@ public class Estudiante {
         this.codigo = codigo;
         this.carrera = carrera;
         this.promedio = promedio;
+    }
+
+    public Estudiante() {
     }
 
     public String getNombre() {
@@ -49,5 +50,11 @@ public class Estudiante {
 
     public void setPromedio(double promedio) {
         this.promedio = promedio;
+    }
+
+    @Override
+    public String toString() {
+        return "Estudiante: \n - Nombre = " + nombre + "\n - Código = " + codigo + "\n - Carrera = " + carrera +
+                "\n - Promedio = " + promedio;
     }
 }
