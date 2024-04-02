@@ -8,9 +8,9 @@ public class Estudiante {
     private String nombre = "";
     private String codigo = "";
     private String carrera = "";
-    private double promedio = 0;
+    private float promedio = 0;
 
-    public Estudiante(String nombre, String codigo, String carrera, double promedio) {
+    public Estudiante(String nombre, String codigo, String carrera, float promedio) {
         this.nombre = nombre;
         this.codigo = codigo;
         this.carrera = carrera;
@@ -44,11 +44,11 @@ public class Estudiante {
         this.carrera = carrera;
     }
 
-    public double getPromedio() {
+    public float getPromedio() {
         return promedio;
     }
 
-    public void setPromedio(double promedio) {
+    public void setPromedio(float promedio) {
         this.promedio = promedio;
     }
 
