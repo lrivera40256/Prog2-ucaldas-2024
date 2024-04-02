@@ -32,6 +32,7 @@ public class Main {
                 // Registrar préstamo
                 case "3":
                     instan_RegistroBiblioteca.registrarPrestamo(instan_RegistroBiblioteca.crearPrestamo());
+                    System.out.println("Su préstamo se ha registrado con éxito");
                     break;
 
                 // Registrar devolución
