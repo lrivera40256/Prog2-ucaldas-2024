@@ -38,11 +38,11 @@ public class RegistroEstudiantes {
             }
         } while (yaExiste);
         boolean promInvalido;
-        Double promedio = 0.0;
+        float promedio = 0;
         do {
             promInvalido = false;
             System.out.println("Ingresa el promedio del estudiante");
-            promedio = scn.nextDouble();
+            promedio = scn.nextFloat();
             scn.nextLine();
             if (promedio < 0 || promedio > 5) {
                 promInvalido = true;
@@ -157,8 +157,8 @@ public class RegistroEstudiantes {
     // Método para leer un archivo y agregar los objetos al ArrayList
     public void leer_archivo(ArrayList<Estudiante> lista) {
         try {
-            BufferedReader lector = new BufferedReader(new FileReader(
-                    "C:\\Users\\Luis Miguel\\Desktop\\Universidad\\Ing sistemas\\2024 - I\\Programación 2\\Taller_Calificable\\Sistema_estudiantes\\estudiantes_registrados.txt"));
+            BufferedReader lector = new BufferedReader(
+                    new FileReader("Sistema_estudiantes\\estudiantes_registrados.txt"));
             String linea = "";
             while ((linea = lector.readLine()) != null) {
                 String[] bloques = linea.split("\t");
@@ -167,7 +167,8 @@ public class RegistroEstudiantes {
                     String nombre = bloques[0];
                     String codigo = bloques[1];
                     String carrera = bloques[2];
-                    float promedio = Float.parseFloat(bloques[3]);
+                    float promedio = Float.valueOf(bloques[3]);
+                    System.out.println(promedio);
                     lista.add(new Estudiante(nombre, codigo, carrera, promedio));
                 }
             }
