@@ -137,12 +137,8 @@ public class RegistroBiblioteca {
     public boolean vencido(String cedula, ArrayList<Prestamo> listaPrestamos) {
         Date fechaActual = new Date();
         boolean prestVencido = false;
-        System.out.println(prestVencido);
-        System.out.println(listaPrestamos.size());
-        ;
         if (listaPrestamos.size() > 0) {
             for (Prestamo prestamo : listaPrestamos) {
-                System.out.println("Error");
                 if (prestamo.getUsuario().getCedula().equals(cedula)
                         && (prestamo.getFechaPrestamo().after(fechaActual))) {
                     System.out.println("Tiene un prestamo vencido");
@@ -192,13 +188,24 @@ public class RegistroBiblioteca {
             }
         } while (!puedePrestar);
 
+        if (puedePrestar && listaPrestamos.size() == 0) {
+            Usuario usuario = crearUsuario();
+            listaUsuarios.add(usuario);
+        }
         Usuario usuario = filtrarUsuario(cedula).get(0);
 
         Date fechaPrestamo = new Date();
         System.out.println("La fecha del préstamo es: " + fechaPrestamo);
 
         System.out.println("Ingrese la fecha de devolución del préstamo");
-        Date fechaDevolucion = new Date(scn.nextInt(), scn.nextInt(), scn.nextInt());
+        System.out.println("ingrese el año");
+        int anio = scn.nextInt();
+        System.out.println("Ingrese el mes");
+        int mes = scn.nextInt();
+        System.out.println("Ingrese el dia");
+        int dia = scn.nextInt();
+        Date fechaDevolucion = new Date(anio, mes, dia);
+        scn.nextLine();
 
         Prestamo instan_prestamo = new Prestamo(libro, usuario, fechaPrestamo, fechaDevolucion);
         return instan_prestamo;
