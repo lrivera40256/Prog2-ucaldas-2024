@@ -7,6 +7,11 @@ public class Main {
     static RegistroBiblioteca instan_RegistroBiblioteca = new RegistroBiblioteca();
 
     public static void main(String[] args) {
+        instan_RegistroBiblioteca.leer_archivo_Libro(instan_RegistroBiblioteca.listaLibros);
+        instan_RegistroBiblioteca.leer_archivo_autores(instan_RegistroBiblioteca.listaAutores);
+        instan_RegistroBiblioteca.leer_archivo_prestamos(instan_RegistroBiblioteca.listaPrestamos);
+        instan_RegistroBiblioteca.leer_archivo_usuarios(instan_RegistroBiblioteca.listaUsuarios);
+
         System.out.println("Bienvenido al sistema de información de la biblioteca Gatos Estudiosos");
         System.out.println("Ingrese su nombre");
         String nombre = scn.nextLine();

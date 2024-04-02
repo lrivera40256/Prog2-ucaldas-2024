@@ -168,7 +168,6 @@ public class RegistroEstudiantes {
                     String codigo = bloques[1];
                     String carrera = bloques[2];
                     float promedio = Float.valueOf(bloques[3]);
-                    System.out.println(promedio);
                     lista.add(new Estudiante(nombre, codigo, carrera, promedio));
                 }
             }
