@@ -15,6 +15,9 @@
 
 package sistema_biblioteca;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
@@ -282,5 +285,115 @@ public class RegistroBiblioteca {
         System.out.println("4- Registrar devolución");
 
         return scn.nextLine();
+    }
+
+    // Método para leer un archivo y agregar los objetos al ArrayList
+    public void leer_archivo_Libro(ArrayList<Libro> lista) {
+        try {
+            BufferedReader lector = new BufferedReader(
+                    new FileReader("sistema_biblioteca\\listaLibros.txt"));
+            String linea = "";
+            while ((linea = lector.readLine()) != null) {
+                String[] bloques = linea.split("\t");
+
+                if (bloques.length == 6) {
+                    String titulo = bloques[0];
+                    String nom_aut = bloques[1];
+                    String nacio_aut = bloques[2];
+                    Autor autor = new Autor(nom_aut, nacio_aut);
+
+                    String codigo_lib = bloques[3];
+                    String categoria = bloques[4];
+                    int ejemplares = Integer.valueOf(bloques[5]);
+                    lista.add(new Libro(titulo, autor, codigo_lib, categoria, ejemplares));
+                }
+            }
+            lector.close();
+        } catch (IOException e) {
+            System.out.println("Error al leer el archivo" + e.getMessage());
+        }
+    }
+
+    // Método para leer un archivo y agregar los objetos al ArrayList
+    public void leer_archivo_prestamos(ArrayList<Prestamo> lista) {
+        try {
+            BufferedReader lector = new BufferedReader(
+                    new FileReader("sistema_biblioteca\\listaPrestamos.txt"));
+            String linea = "";
+            while ((linea = lector.readLine()) != null) {
+                String[] bloques = linea.split("\t");
+
+                if (bloques.length == 14) {
+                    String titulo = bloques[0];
+                    String nom_aut = bloques[1];
+                    String nacio_aut = bloques[2];
+                    Autor autor = new Autor(nom_aut, nacio_aut);
+                    String codigo_lib = bloques[3];
+                    String categoria = bloques[4];
+                    int ejemplares = Integer.valueOf(bloques[5]);
+                    Libro libro = new Libro(titulo, autor, codigo_lib, categoria, ejemplares);
+                    String nom_usu = bloques[6];
+                    String ced_usu = bloques[7];
+                    Usuario usuario = new Usuario(nom_usu, ced_usu);
+                    int ani = Integer.parseInt(bloques[8]);
+                    int mes = Integer.parseInt(bloques[9]);
+                    int dia = Integer.parseInt(bloques[10]);
+                    Date fe_pres = new Date(ani, mes, dia);
+                    ani = Integer.parseInt(bloques[11]);
+                    mes = Integer.parseInt(bloques[12]);
+                    dia = Integer.parseInt(bloques[13]);
+                    Date fe_dev = new Date(ani, mes, dia);
+
+                    lista.add(new Prestamo(libro, usuario, fe_pres, fe_dev));
+                }
+            }
+            lector.close();
+        } catch (IOException e) {
+            System.out.println("Error al leer el archivo" + e.getMessage());
+        }
+    }
+
+    // Método para leer un archivo y agregar los objetos al ArrayList
+    public void leer_archivo_usuarios(ArrayList<Usuario> lista) {
+        try {
+            BufferedReader lector = new BufferedReader(
+                    new FileReader("sistema_biblioteca\\listaUsuarios.txt"));
+            String linea = "";
+            while ((linea = lector.readLine()) != null) {
+                String[] bloques = linea.split("\t");
+
+                if (bloques.length == 2) {
+                    String nombre = bloques[0];
+                    String cedula = bloques[1];
+
+                    lista.add(new Usuario(nombre, cedula));
+                }
+            }
+            lector.close();
+        } catch (IOException e) {
+            System.out.println("Error al leer el archivo" + e.getMessage());
+        }
+    }
+
+    // Método para leer un archivo y agregar los objetos al ArrayList
+    public void leer_archivo_autores(ArrayList<Autor> lista) {
+        try {
+            BufferedReader lector = new BufferedReader(
+                    new FileReader("sistema_biblioteca\\listaAutores.txt"));
+            String linea = "";
+            while ((linea = lector.readLine()) != null) {
+                String[] bloques = linea.split("\t");
+
+                if (bloques.length == 2) {
+                    String nombre = bloques[0];
+                    String nacionalidad = bloques[1];
+
+                    lista.add(new Autor(nombre, nacionalidad));
+                }
+            }
+            lector.close();
+        } catch (IOException e) {
+            System.out.println("Error al leer el archivo" + e.getMessage());
+        }
     }
 }

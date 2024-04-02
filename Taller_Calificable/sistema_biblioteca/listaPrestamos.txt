@@ -1,0 +1,5 @@
+La sombra del viento	Carlos Ruiz Zafón	Español	003	Novela	4	Usuario_76	123	2023    12 21	2024    01 19
+Cien años de soledad	Gabriel García Márquez	Colombiano	002	Realismo mágico	3	Usuario_58	321	2023    11 15	2023    12 09
+Don Quijote de la Mancha	Miguel de Cervantes	Español	001	Novela	5	Usuario_85	2023    03 07	125	2023    04 05
+El amor en los tiempos del cólera	Gabriel García Márquez	Colombiano	004	Novela	2	Usuario_71	158	2023    07 10	2023    07 11
+El laberinto de los espíritus	Carlos Ruiz Zafón	Español	005	Novela	6	Usuario_19	2023    09 17	520	2023    10 10
