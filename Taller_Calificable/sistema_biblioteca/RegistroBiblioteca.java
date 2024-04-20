@@ -353,6 +353,25 @@ public class RegistroBiblioteca {
         }
     }
 
+    // Libros con mayor cantidad de ejemplares (2)
+    public void libroMayorStock() {
+        int posicionMay = 0;
+
+        for (int i = 1; i < listaLibros.size(); i++) {
+            if (listaLibros.get(posicionMay).getEjemplares() < listaLibros.get(i).getEjemplares()) {
+                posicionMay = i;
+            }
+        }
+
+        int ejemMay = listaLibros.get(posicionMay).getEjemplares();
+
+        for (int j = 0; j < listaLibros.size(); j++) {
+            if (listaLibros.get(j).getEjemplares() == ejemMay) {
+                System.out.println(listaLibros.get(j).getTitulo());
+            }
+        }
+    }
+
     // Método para leer un archivo y agregar los objetos al ArrayList
     public void leer_archivo_usuarios(ArrayList<Usuario> lista) {
         try {

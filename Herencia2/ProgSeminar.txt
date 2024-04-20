@@ -1,0 +1,5 @@
+Programacion1   5 Juan    3212323    juan@gmail.com
+Algoritmos  4    Maria  4567890  maria@hotmail.com
+EstructurasDeDatos  6    Pedro  7890123  pedro@yahoo.com
+ProgramacionOrientadaObjetos    5  Laura    2345678    laura@gmail.com
+IngenieriaDeSoftware    6  Carlos   8901234   carlos@outlook.com

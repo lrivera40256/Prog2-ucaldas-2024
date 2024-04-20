@@ -1,5 +1,9 @@
 package gestion_inventario;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
 // Se debe crear una clase RegistroInventario con los siguientes métodos:
 // a. registrarProducto(Producto producto): Agrega un producto al registro. Este método debe realizar las mismas
 // validaciones que el ejercicio anterior.
@@ -46,7 +50,7 @@ public class RegistroInventario {
         System.out.println("Ingrese la categoria del producto");
         String nomCat = scn.nextLine();
         Categoria categoria;
-        if (filtrarProducto(nomCat).size() == 0) {
+        if (filtrarCategoria(nomCat).size() == 0) {
             categoria = crearCategoria();
             registrarCategoria(categoria);
         }
@@ -192,6 +196,56 @@ public class RegistroInventario {
             }
         }
         return listaFiltradaProducto;
+    }
+
+    // Método que muestra el menú principal
+    public String menuPrincipal() {
+        System.out.println("¿Qúe deseas hacer? Ingrese la opción deseada");
+        System.out.println("1- Registrar un producto en el sistema");
+        System.out.println("2- Registrar una categoria en el sistema");
+        System.out.println("3- Registrar proveedor");
+        System.out.println("4- Registrar venta");
+
+        return scn.nextLine();
+    }
+
+    // Metodo que encuentre el producto con menor stock
+    public String menorStock() {
+        Producto producto = listaProductos.get(0);
+
+        for (int i = 1; i < listaProductos.size(); i++) {
+            if (listaProductos.get(i).getStock() < producto.getStock()) {
+                producto = listaProductos.get(i);
+            }
+        }
+
+        return producto.getNombre();
+    }
+
+    // Método para leer un archivo y agregar los objetos al ArrayList
+    public void leer_archivo_productos(ArrayList<Producto> lista) {
+        try {
+            BufferedReader lector = new BufferedReader(
+                    new FileReader("gestion_inventario\\listaProductos.txt"));
+            String linea = "";
+            while ((linea = lector.readLine()) != null) {
+                String[] bloques = linea.split("\t");
+
+                if (bloques.length == 5) {
+                    String nombre = bloques[0];
+                    String nomCat = bloques[1];
+                    String descripcion = bloques[2];
+                    double precio = Double.parseDouble(bloques[3]);
+                    int stock = Integer.parseInt(bloques[4]);
+
+                    Categoria categoria = new Categoria(nomCat, descripcion);
+                    lista.add(new Producto(nombre, categoria, precio, stock));
+                }
+            }
+            lector.close();
+        } catch (IOException e) {
+            System.out.println("Error al leer el archivo" + e.getMessage());
+        }
     }
 
 }

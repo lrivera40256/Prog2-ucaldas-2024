@@ -12,67 +12,71 @@ public class Main {
         instan_RegistroBiblioteca.leer_archivo_prestamos(instan_RegistroBiblioteca.listaPrestamos);
         instan_RegistroBiblioteca.leer_archivo_usuarios(instan_RegistroBiblioteca.listaUsuarios);
 
-        System.out.println("Bienvenido al sistema de información de la biblioteca Gatos Estudiosos");
-        System.out.println("Ingrese su nombre");
-        String nombre = scn.nextLine();
-        System.out.println("Tenga un saludo cordial " + nombre);
+        instan_RegistroBiblioteca.libroMayorStock();
 
-        boolean preguntar = true;
-        boolean terminar;
-        do {
-            String eleccion = instan_RegistroBiblioteca.menuPrincipal();
-            terminar = false;
-            switch (eleccion) {
-                // Agregar libro
-                case "1":
-                    instan_RegistroBiblioteca.registrarLibro(instan_RegistroBiblioteca.crearLibro());
-                    System.out.println("El libro se ha añadido satisfactoriamente");
-                    break;
+        // System.out.println("Bienvenido al sistema de información de la biblioteca
+        // Gatos Estudiosos");
+        // System.out.println("Ingrese su nombre");
+        // String nombre = scn.nextLine();
+        // System.out.println("Tenga un saludo cordial " + nombre);
 
-                // Agregar autor
-                case "2":
-                    instan_RegistroBiblioteca.registrarAutor(instan_RegistroBiblioteca.crearAutor());
-                    break;
+        // boolean preguntar = true;
+        // boolean terminar;
+        // do {
+        // String eleccion = instan_RegistroBiblioteca.menuPrincipal();
+        // terminar = false;
+        // switch (eleccion) {
+        // // Agregar libro
+        // case "1":
+        // instan_RegistroBiblioteca.registrarLibro(instan_RegistroBiblioteca.crearLibro());
+        // System.out.println("El libro se ha añadido satisfactoriamente");
+        // break;
 
-                // Registrar préstamo
-                case "3":
-                    instan_RegistroBiblioteca.registrarPrestamo(instan_RegistroBiblioteca.crearPrestamo());
-                    System.out.println("Su préstamo se ha registrado con éxito");
-                    break;
+        // // Agregar autor
+        // case "2":
+        // instan_RegistroBiblioteca.registrarAutor(instan_RegistroBiblioteca.crearAutor());
+        // break;
 
-                // Registrar devolución
-                case "4":
-                    instan_RegistroBiblioteca.registrarDevolucion();
+        // // Registrar préstamo
+        // case "3":
+        // instan_RegistroBiblioteca.registrarPrestamo(instan_RegistroBiblioteca.crearPrestamo());
+        // System.out.println("Su préstamo se ha registrado con éxito");
+        // break;
 
-                    // Elección inválida
-                default:
-                    terminar = false;
-                    preguntar = false;
-                    System.out.println("Ingrese una opción válida");
-                    break;
-            }
+        // // Registrar devolución
+        // case "4":
+        // instan_RegistroBiblioteca.registrarDevolucion();
 
-            terminar = false;
-            while (preguntar) {
-                preguntar = false;
-                System.out.println("¿Deseas realizar otra modificación/validación en el sistema?");
-                System.out.println(" 1- Si \n 2- No");
-                switch (scn.nextLine()) {
-                    case "1":
-                        terminar = false;
-                        preguntar = false;
-                        break;
-                    case "2":
-                        terminar = true;
-                        preguntar = false;
-                        break;
+        // // Elección inválida
+        // default:
+        // terminar = false;
+        // preguntar = false;
+        // System.out.println("Ingrese una opción válida");
+        // break;
+        // }
 
-                    default:
-                        System.out.println("Ingrese una opción válida");
-                        preguntar = true;
-                        break;
-                }
-            }
-        } while (!terminar);
+        // terminar = false;
+        // while (preguntar) {
+        // preguntar = false;
+        // System.out.println("¿Deseas realizar otra modificación/validación en el
+        // sistema?");
+        // System.out.println(" 1- Si \n 2- No");
+        // switch (scn.nextLine()) {
+        // case "1":
+        // terminar = false;
+        // preguntar = false;
+        // break;
+        // case "2":
+        // terminar = true;
+        // preguntar = false;
+        // break;
+
+        // default:
+        // System.out.println("Ingrese una opción válida");
+        // preguntar = true;
+        // break;
+        // }
+        // }
+        // } while (!terminar);
     }
 }

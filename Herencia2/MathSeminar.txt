@@ -1,0 +1,5 @@
+TeoríaDeNúmeros 5   Pablo 1112222 pablo@example.com
+CálculoVariacional  4.5  Lucía    3334444    lucia@example.org
+GeometríaAlgebraica 5   Andrés    5556666    andres@example.com
+ProbabilidadEstocástica 6   Julia 7778888 julia@example.org
+AnálisisFuncional   4.5   Raúl  9990000  raul@example.com

@@ -1,0 +1,4 @@
+Banano	fruta	fruta tropical	400	25
+Arroz	cereal	compra frecuente	3000	21
+Frijol	grano	compra frecuente	4000	10
+Chocolatina	dulce	alto en azucar	900	2
