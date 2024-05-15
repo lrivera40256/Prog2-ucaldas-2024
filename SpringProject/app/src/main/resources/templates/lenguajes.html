@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenguajes de programación</title>
+</head>
+<body>
+    <div class="container">
+        <h3>   Lista de lenguajes de programación   </h3>
+        <table border="5">
+            <tr>
+                <th>Lenguaje</th>
+                <th>Tipo_paradigma</th>
+                <th>Frameworks</th>
+            </tr>
+            <tr th:each = "leng: ${listaAtributosLengProg}">
+                <td th:text="${leng.lenguaje}"></td>
+                <td th:text="${leng.tipo_paradigma}"></td>
+                <td th:text="${leng.frameworks}"></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>
