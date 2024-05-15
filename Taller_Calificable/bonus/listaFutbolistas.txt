@@ -1,0 +1,5 @@
+Once Caldas	Julian	Delantero	31	Colombiano
+Nacional	Pedro	Defensa	19	Colombiano
+Millonarios	Andres	Portero	1	Argentino
+Medellin	Luis	Delantero	10	Colombiano
+America	Jacobo	Lateral	5	Colombiano

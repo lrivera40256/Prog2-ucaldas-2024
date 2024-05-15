@@ -1,0 +1,5 @@
+MecánicaEstadística 5   Elena 1112222 elena@example.com
+TeoríaCuánticaDeCampos  4.5  Diego    3334444    diego@example.org
+AstrofísicaGaláctica    5  Carmen   5556666   carmen@example.com
+FísicaDePlasmas 6   Luis  7778888  luis@example.org
+RelatividadGeneral  4.5  Marta    9990000    marta@example.com

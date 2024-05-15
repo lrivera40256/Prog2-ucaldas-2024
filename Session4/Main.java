@@ -36,6 +36,7 @@ public class Main {
                 // Exersice 4
 
             default:
+
                 break;
         }
     }

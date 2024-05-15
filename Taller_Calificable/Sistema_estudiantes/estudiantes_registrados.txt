@@ -1,0 +1,5 @@
+Miguel Rivera	40256	Ingeniería de sistemas	4.0
+Andres Hernandez	86542	Ingeniería de alimentos	3.0
+Julian Molina	54763	Sociologia	2.6
+Juanita Ortega	51243	Filosofia	4.8
+Jairo Jaramillo	11234	Ingeniería de sistemas	1.0

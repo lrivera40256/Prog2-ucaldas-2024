@@ -1,0 +1,5 @@
+1984	George Orwell	Británico	006	Distopía	60
+To Kill a Mockingbird	Harper Lee	Estadounidense	007	Novela	11
+The Great Gatsby	F. Scott Fitzgerald	Estadounidense	008	Novela	11
+Moby Dick	Herman Melville	Estadounidense	009	Aventura	60
+Pride and Prejudice	Jane Austen	Británico	010	Romance	3
